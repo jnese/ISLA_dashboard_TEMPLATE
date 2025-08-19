@@ -7,10 +7,10 @@ This guide walks a new user from cloning the repo to a working local run of the 
 
 ### (1) Clone the repository
 
-    + Clone the ISLA_dashboard_TEMPLATE repo
-    + Make sure the following are in your .gitignore (to avoid committing secrets locally):
-        - .secrets/
-        - database.sqlite
+- Clone the ISLA_dashboard_TEMPLATE repo
+- Make sure the following are in your .gitignore (to avoid committing secrets locally):
+    + .secrets//
+    + database.sqlite
   
 ### (2) Run the `set_up.R` file
 
@@ -30,10 +30,10 @@ Once you edit these, you will not need to edit again unless you want to make cha
 3. Enter the school year
 4. Enter your ISLA Google Sheet ID
     + To find your Google Sheet ID:
-        a.	Open your ISLA Google Sheet
-        b.	Look at the URL in your browser
-        c.	Copy the long string of letters/numbers between /d/ and /edit
-        Example: https://docs.google.com/spreadsheets/d/<this-is-the-sheet-ID>/edit
+        - Open your ISLA Google Sheet
+        - Look at the URL in your browser
+        - Copy the long string of letters/numbers between /d/ and /edit
+          - Example: https://docs.google.com/spreadsheets/d/this-is-the-sheet-ID/edit
 5. Enter the grade levels in your school
 6. Enter the users and passwords for those who will access your ISLA Tracking Sheet
    Note that you can always edit to add/remove users as needed.
