@@ -8,10 +8,7 @@ This guide walks a new user from cloning the repo to a working local run of the 
 ### (1) Clone the repository
 
 - Clone the ISLA_dashboard_TEMPLATE repo
-- Make sure the following are in your .gitignore (to avoid committing secrets locally):
-    + .secrets//
-    + database.sqlite
-  
+
 ### (2) Run the `set_up.R` file
 
 We use Google OAuth setup `{googledrive}` and `{googlesheets4}` to cache OAuth tokens in a local folder named *.secrets*. 
@@ -33,13 +30,17 @@ Once you edit these, you will not need to edit again unless you want to make cha
         - Open your ISLA Google Sheet
         - Look at the URL in your browser
         - Copy the long string of letters/numbers between /d/ and /edit
-          - Example: https://docs.google.com/spreadsheets/d/this-is-the-sheet-ID/edit
+          - Example: https[]()://docs.google.com/spreadsheets/d/**this-is-the-sheet-ID**/edit
 5. Enter the grade levels in your school
 6. Enter the users and passwords for those who will access your ISLA Tracking Sheet
    Note that you can always edit to add/remove users as needed.
 
 
-*Notes*
+**Notes**
+
 The app uses `{shinymanager}` to protect access via a login screen and keyring to secure the database passphrase locally. 
 Use `shinymanager::read_db()` / `shinymanager::update_db()` to add/remove users or reset passwords without rebuilding from scratch.
+
+We do recommend you **NOT** host your school's ISLA dashboard repo publicly
+
 
