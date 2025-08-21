@@ -35,6 +35,15 @@ Once you edit these, you will not need to edit again unless you want to make cha
 6. Enter the users and passwords for those who will access your ISLA Tracking Sheet
    Note that you can always edit to add/remove users as needed.
 
+### (4) Run the `app.R` file
+
+Make sure the code, app, and password manager are working correctly.
+
+### (5) Deploy your ISLA Shiny App
+
+You will need to deploy your ISLA Shiny app on the Web.
+
+One good, and potentially free, option that we recommend is https://www.shinyapps.io/. 
 
 **Notes**
 
