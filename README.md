@@ -1,5 +1,11 @@
 # ISLA Dashboard
 
+Before establishing your ISLA dashboard, you will first need to create your own copy of the ISLA Tracking Sheet and linked Sign-in/Out Form. 
+
+You can find those instructions in the [ISLA_Tracking-Sheet_Set-Up_Instructions](./ISLA_Tracking-Sheet_Set-Up_Instructions.pdf) document here.
+
+*Note.* You will need data entries in your ISLA Tracking sheet before your ISLA dashboard can be launched.
+
 ## Shiny App Setup Guide
 
 This guide walks a new user from cloning the repo to a working local run of the ISLA Shiny app.
