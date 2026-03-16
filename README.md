@@ -14,6 +14,7 @@ This guide walks a new user from cloning the repo to a working local run of the 
 ### (1) Clone the repository
 
 - Clone the ISLA_dashboard_TEMPLATE repo
+- When you save a copy, rename the repo, replacing "TEMPLATE" with the school name and year (e.g., "Central_2025-26")
 
 ### (2) Run the `set_up.R` file
 

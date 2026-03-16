@@ -8,6 +8,7 @@ library(reactable)
 library(htmltools)
 library(shinyWidgets)
 library(shinymanager)
+library(ggthemes)
 
 source(here::here("functions_stu.R"))
 source(here::here("functions_sch.R"))

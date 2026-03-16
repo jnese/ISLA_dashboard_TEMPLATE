@@ -5,6 +5,13 @@ library(lubridate)
 library(shinymanager)
 library(keyring)
 
+## Create the {shinymanager} database
+shinymanager::create_db(
+  credentials_data = credentials,
+  sqlite_path = here::here("database.sqlite"), 
+  passphrase = key_get("ISLA-key")
+)
+
 make_grade_choices <- function(vec) {
   vec <- as.character(vec)
   grade_vec <- setNames(vec, paste("Grade", vec))
@@ -46,8 +53,8 @@ dta <- dta_raw %>%
   separate(student_name, c("last", "first"), ",") %>% 
   mutate(student_name = paste0(first, " ", last)) %>% 
   select(student_name, everything()) %>% 
-  mutate_at(vars(teacher_name, does_students_behavior_pose_a_safety_risk_to_them_or_others:did_the_student_reenter_the_classroom),
-            ~na_if(., "")) %>% 
+  mutate(across(c(teacher_name, does_students_behavior_pose_a_safety_risk_to_them_or_others:did_the_student_reenter_the_classroom), 
+                ~ifelse(. == "", NA_character_, .))) %>% 
   mutate(teacher_name = replace_na(teacher_name, "missing")) %>%
   mutate(across(c(time_in, time_out), ~map(.x, as.character))) %>% 
   unnest(cols = c(time_in, time_out)) %>% 
