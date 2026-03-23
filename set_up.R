@@ -20,9 +20,18 @@ library(gargle)
 options(gargle_oauth_cache = ".secrets")
 options(options(gargle_verbosity = "debug"))
 googledrive::drive_auth() # Authenticate to produce the token in the cache folder
+# Complete the browser login using the Google account that has access to the ISLA Sheets/Drive.
 googlesheets4::gs4_auth(token = googledrive::drive_token())
 
-# Complete the browser login using the Google account that has access to the ISLA Sheets/Drive.
-
 # Verify that a .secrets/ directory now exists in your project (and that it’s in .gitignore).
+
+## Create the {shinymanager} database
+
+source(here::here("school_info.R"))
+
+shinymanager::create_db(
+  credentials_data = credentials,
+  sqlite_path = here::here("database.sqlite"), 
+  passphrase = key_get("ISLA-key")
+)
 

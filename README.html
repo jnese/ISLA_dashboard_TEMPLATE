@@ -373,24 +373,12 @@ run of the ISLA Shiny app.</p>
 school name and year (e.g., “Central_2025-26”)</li>
 </ul>
 </div>
-<div id="run-the-set_up.r-file" class="section level3">
-<h3>(2) Run the <code>set_up.R</code> file</h3>
-<p>We use Google OAuth setup <code>{googledrive}</code> and
-<code>{googlesheets4}</code> to cache OAuth tokens in a local folder
-named <em>.secrets</em>. The flow is: First, do an interactive login
-once to obtain/refresh tokens. Thereafter, re-use cached tokens
-silently.</p>
-<ul>
-<li>You will need to allow remote server authentication.</li>
-<li>Once you successfully execute the <code>set_up.R</code> file, you
-will not need to execute this script again.</li>
-</ul>
-</div>
 <div id="edit-the-school_info.r-file" class="section level3">
-<h3>(3) Edit the <code>school_info.R</code> file</h3>
-<p>You will need to edit this file in <strong>six</strong> (6) places.
-Once you edit these, you will not need to edit again unless you want to
-make changes to those items.</p>
+<h3>(2) Edit the <code>school_info.R</code> file</h3>
+<p>You will need to edit this file in <strong>six</strong> (6) places
+<strong>and</strong> then save the file. Once you edit these, you will
+not need to edit again unless you want to make changes to those
+items.</p>
 <ol style="list-style-type: decimal">
 <li>Enter your Google email address that will have access to the Google
 ISLA Tracking Sheets &amp; Google Drive</li>
@@ -412,7 +400,21 @@ ISLA Tracking Sheets &amp; Google Drive</li>
 <li>Enter the users and passwords for those who will access your ISLA
 Tracking Sheet Note that you can always edit to add/remove users as
 needed.</li>
+<li>Save the <code>school_info.R</code> file</li>
 </ol>
+</div>
+<div id="run-the-set_up.r-file" class="section level3">
+<h3>(3) Run the <code>set_up.R</code> file</h3>
+<p>We use Google OAuth setup <code>{googledrive}</code> and
+<code>{googlesheets4}</code> to cache OAuth tokens in a local folder
+named <em>.secrets</em>. The flow is: First, do an interactive login
+once to obtain/refresh tokens. Thereafter, re-use cached tokens
+silently.</p>
+<ul>
+<li>You will need to allow remote server authentication.</li>
+<li>Once you successfully execute the <code>set_up.R</code> file, you
+will not need to execute this script again.</li>
+</ul>
 </div>
 <div id="run-the-app.r-file" class="section level3">
 <h3>(4) Run the <code>app.R</code> file</h3>

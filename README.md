@@ -16,17 +16,9 @@ This guide walks a new user from cloning the repo to a working local run of the 
 - Clone the ISLA_dashboard_TEMPLATE repo
 - When you save a copy, rename the repo, replacing "TEMPLATE" with the school name and year (e.g., "Central_2025-26")
 
-### (2) Run the `set_up.R` file
+### (2) Edit the `school_info.R` file 
 
-We use Google OAuth setup `{googledrive}` and `{googlesheets4}` to cache OAuth tokens in a local folder named *.secrets*. 
-The flow is: First, do an interactive login once to obtain/refresh tokens. Thereafter, re-use cached tokens silently.
-
--	You will need to allow remote server authentication. 
--	Once you successfully execute the `set_up.R` file, you will not need to execute this script again.
-
-### (3) Edit the `school_info.R` file 
-
-You will need to edit this file in **six** (6) places. 
+You will need to edit this file in **six** (6) places **and** then save the file. 
 Once you edit these, you will not need to edit again unless you want to make changes to those items.
 
 1. Enter your Google email address that will have access to the Google ISLA Tracking Sheets & Google Drive
@@ -41,6 +33,15 @@ Once you edit these, you will not need to edit again unless you want to make cha
 5. Enter the grade levels in your school
 6. Enter the users and passwords for those who will access your ISLA Tracking Sheet
    Note that you can always edit to add/remove users as needed.
+7. Save the `school_info.R` file 
+
+### (3) Run the `set_up.R` file
+
+We use Google OAuth setup `{googledrive}` and `{googlesheets4}` to cache OAuth tokens in a local folder named *.secrets*. 
+The flow is: First, do an interactive login once to obtain/refresh tokens. Thereafter, re-use cached tokens silently.
+
+-	You will need to allow remote server authentication. 
+-	Once you successfully execute the `set_up.R` file, you will not need to execute this script again.
 
 ### (4) Run the `app.R` file
 

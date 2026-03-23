@@ -5,12 +5,6 @@ library(lubridate)
 library(shinymanager)
 library(keyring)
 
-## Create the {shinymanager} database
-shinymanager::create_db(
-  credentials_data = credentials,
-  sqlite_path = here::here("database.sqlite"), 
-  passphrase = key_get("ISLA-key")
-)
 
 make_grade_choices <- function(vec) {
   vec <- as.character(vec)
