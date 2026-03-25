@@ -29,6 +29,8 @@ googlesheets4::gs4_auth(token = googledrive::drive_token())
 
 source(here::here("school_info.R"))
 
+key_set("ISLA-key")
+
 shinymanager::create_db(
   credentials_data = credentials,
   sqlite_path = here::here("database.sqlite"), 
