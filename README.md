@@ -33,7 +33,9 @@ Once you edit these, you will not need to edit again unless you want to make cha
 5. Enter the grade levels in your school
 6. Enter the users and passwords for those who will access your ISLA Tracking Sheet
    Note that you can always edit to add/remove users as needed.
-7. Save the `school_info.R` file 
+7. Enter a password to protect the credentials entered in step (6)
+
+Remember to save the `school_info.R` file 
 
 ### (3) Run the `set_up.R` file
 

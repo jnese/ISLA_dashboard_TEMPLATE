@@ -29,7 +29,7 @@ googlesheets4::gs4_auth(token = googledrive::drive_token())
 
 source(here::here("school_info.R"))
 
-key_set("ISLA-key")
+key_set_with_value("ISLA-key", password = paste0(db_passphrase))
 
 shinymanager::create_db(
   credentials_data = credentials,
