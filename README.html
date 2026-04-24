@@ -426,6 +426,37 @@ correctly.</p>
 <h3>(5) Deploy your ISLA Shiny App</h3>
 <p>You will need to deploy your ISLA Shiny app on the Web.</p>
 <p>One good, and potentially free, option that we recommend is <a href="https://www.shinyapps.io/" class="uri">https://www.shinyapps.io/</a>.</p>
+<p>Here are the deployment steps<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>:</p>
+<ol style="list-style-type: decimal">
+<li>Open and run <code>app.R</code> to confirm it deploys locally</li>
+<li>Click on the publish icon dropdown to the right of the “<strong>Run
+App</strong>” icon in <code>R</code> within the <code>app.R</code>
+script</li>
+<li>Click on manage accounts</li>
+<li>On the Publishing tab, click on the “<strong>Connect</strong>”
+button and select “<strong>ShinyApps.io</strong>”</li>
+<li>Go to your ShinyApps.io account</li>
+<li>In the ShinyApps.io dashboard
+<ol style="list-style-type: lower-alpha">
+<li>click on “<strong>Account</strong>” on the lefthand side of the
+window and then click on “<strong>Tokens</strong>”</li>
+<li>click the “<strong>show</strong>” button to view the token</li>
+<li>click on the “<strong>copy</strong>” button to copy the token and
+secret</li>
+</ol></li>
+<li>Return to <code>R</code>, paste the token and secret into
+<code>R</code> in the manage accounts box</li>
+<li>Click “<strong>connect</strong>”, “<strong>apply</strong>”, and
+“<strong>ok</strong>”</li>
+<li>Go back to the publish icon and click “<strong>publish</strong>”
+(within the <code>app.R</code> script)</li>
+<li>Include all <code>R</code> scripts and related files (including the
+<code>.secrets</code> file) when publishing</li>
+<li>If publication is successful, you will be prompted to log in</li>
+<li>Once published, go to the application on ShinyApps.io, open it,
+click on users, and set the application to
+“<strong>Private</strong>”</li>
+</ol>
 <p><strong>Notes</strong></p>
 <p>The app uses <code>{shinymanager}</code> to protect access via a
 login screen and keyring to secure the database passphrase locally. Use
@@ -436,6 +467,12 @@ passwords without rebuilding from scratch.</p>
 dashboard repo publicly</p>
 </div>
 </div>
+</div>
+<div class="footnotes footnotes-end-of-document">
+<hr />
+<ol>
+<li id="fn1"><p>Credit <a href="https://www.ori.org/project/small-jason/">Dr. Jason Small</a><a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
 
 

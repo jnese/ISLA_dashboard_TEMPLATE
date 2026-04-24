@@ -55,6 +55,25 @@ You will need to deploy your ISLA Shiny app on the Web.
 
 One good, and potentially free, option that we recommend is https://www.shinyapps.io/. 
 
+Here are the deployment steps[^1]:
+
+1. Open and run `app.R` to confirm it deploys locally 
+2. Click on the publish icon dropdown to the right of the "**Run App**" icon in `R` within the `app.R` script
+3. Click on manage accounts
+4. On the Publishing tab, click on the "**Connect**" button and select "**ShinyApps.io**"
+5. Go to your ShinyApps.io account
+6. In the ShinyApps.io dashboard
+    a. click on "**Account**" on the lefthand side of the window and then click on "**Tokens**"
+    b. click the "**show**" button to view the token
+    c. click on the "**copy**" button to copy the token and secret
+7. Return to `R`, paste the token and secret into `R` in the manage accounts box
+8. Click "**connect**", "**apply**", and "**ok**"
+9. Go back to the publish icon and click "**publish**" (within the `app.R` script)
+10. Include all `R` scripts and related files (including the `.secrets` file) when publishing
+11. If publication is successful, you will be prompted to log in
+12. Once published, go to the application on ShinyApps.io, open it, click on users, and set the application to "**Private**"
+
+
 **Notes**
 
 The app uses `{shinymanager}` to protect access via a login screen and keyring to secure the database passphrase locally. 
@@ -62,4 +81,4 @@ Use `shinymanager::read_db()` / `shinymanager::update_db()` to add/remove users 
 
 We do recommend you **NOT** host your school's ISLA dashboard repo publicly
 
-
+[^1]: Credit [Dr. Jason Small](https://www.ori.org/project/small-jason/)
