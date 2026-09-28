@@ -29,7 +29,7 @@ timein_fx <- function(x){
     x
   }
   else {
-   na_if(x, "Never Signed In") 
+   na_if(as.character(x), "Never Signed In") 
   }
 }
 
@@ -38,7 +38,7 @@ timeout_fx <- function(x){
     x
   }
   else {
-    na_if(x, "Never Signed Out") 
+    na_if(as.character(x), "Never Signed Out") 
   }
 }
 
